@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  font-family: "Helvetica", sans-serif;
+  overflow: "hidden";
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@layer components {
+  .layout {
+    @apply flex h-dvh max-h-dvh min-h-dvh w-screen flex-col overflow-hidden bg-slate-900 text-white;
+  }
+  .page-container {
+    @apply flex h-auto w-auto flex-1 flex-col items-start justify-start;
+  }
+}
