@@ -33,6 +33,17 @@ export const ChallengeContainer = ({
     second: null,
   });
 
+  const hrefs = {
+    advent: {
+      href: `https://adventofcode.com/${year}/day/${day}`,
+      Icon: <Icons.LINK />,
+    },
+    code: {
+      href: `https://github.com/douglasyabuki/advent-of-code-2024/tree/master/src/components/challenges/challenges-lists/${year}/day${day >= 10 ? day : "0" + day}.ts`,
+      Icon: <Icons.CODE />,
+    },
+  };
+
   return (
     <Accordion
       HeaderComponent={
@@ -46,21 +57,18 @@ export const ChallengeContainer = ({
     >
       <div className="flex w-auto flex-1 items-center justify-end gap-2 self-stretch">
         <p className="hidden">{story}</p>
-        <a
-          className="jutify-center flex size-8 items-center justify-center rounded-full bg-gray-600"
-          href={`https://adventofcode.com/${year}/day/${day}`}
-          target="_blank"
-        >
-          <Icons.LINK />
-        </a>
-        <a
-          className="jutify-center flex size-8 items-center justify-center rounded-full bg-gray-600"
-          href=""
-        >
-          <Icons.CODE />
-        </a>
+        {Object.entries(hrefs).map(([key, { href, Icon }]) => (
+          <a
+            className="jutify-center flex size-8 items-center justify-center rounded-full bg-gray-600"
+            href={href}
+            target="_blank"
+            key={key}
+          >
+            {Icon}
+          </a>
+        ))}
       </div>
-      <div className="flex w-auto flex-1 items-center justify-start gap-4 self-stretch">
+      <div className="flex w-auto flex-1 flex-col items-center justify-start gap-4 self-stretch sm:flex-row">
         <TextInput
           label="Paste your input"
           value={input}
@@ -72,8 +80,10 @@ export const ChallengeContainer = ({
             setResponses({ first, second });
           }}
         />
-        <ChallengeResponseField part={"One"} response={responses?.first} />
-        <ChallengeResponseField part={"Two"} response={responses?.second} />
+        <div className="flex gap-4 justify-start flex-1 self-stretch">
+          <ChallengeResponseField part={"One"} response={responses?.first} />
+          <ChallengeResponseField part={"Two"} response={responses?.second} />
+        </div>
       </div>
     </Accordion>
   );

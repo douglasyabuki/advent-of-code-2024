@@ -29,7 +29,7 @@ export const TextInput = ({
   return (
     <div
       className={twMerge(
-        "rounded-base group relative flex h-10 w-auto items-center justify-start border-[2px] border-slate-400 px-4 transition-all duration-150 has-[:focus]:border-sky-400 has-[:selected]:border-sky-400 has-[:disabled]:opacity-75 has-[:enabled]:hover:border-sky-400",
+        "self-stretch rounded-base group relative flex h-10 w-auto shrink-0 items-center justify-start border-[2px] border-slate-400 px-4 transition-all duration-150 has-[:focus]:border-sky-400 has-[:selected]:border-sky-400 has-[:disabled]:opacity-75 has-[:enabled]:hover:border-sky-400",
         className,
       )}
     >

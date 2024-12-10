@@ -49,23 +49,5 @@ export const ChallengeResponseField = ({
         <Icons.COPY className="text-current" />
       )}
     </Button>
-    // <button
-    //   className="flex h-10 w-fit min-w-48 items-center justify-between gap-2 border-[2px] border-slate-400 px-4 py-2 text-sm duration-150 enabled:hover:border-sky-400 disabled:border-gray-600 disabled:text-gray-600 active:bg-slate-600"
-    //   disabled={!response}
-    //   onClick={() =>
-    //     copyData({
-    //       data: response,
-    //       onSuccess: () => {},
-    //       onError: () => {},
-    //     })
-    //   }
-    // >
-    //   <strong className="font-bold">Part {part}:</strong>
-    //   <p>
-    //     {!!response &&
-    //       (typeof response === "string" ? response : JSON.stringify(response))}
-    //   </p>
-    //   <Icons.COPY className="text-current" />
-    // </button>
   );
 };
