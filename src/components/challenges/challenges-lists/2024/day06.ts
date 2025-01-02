@@ -155,7 +155,7 @@ Predict the path of the guard. How many distinct positions will the guard visit 
     }
     return visited.size;
   },
-  secondStarFunction: (input: string): unknown => {
+  secondStarFunction: (input: string): number => {
     type Directions = "^" | ">" | "v" | "<";
     type Cell = {
       isVisited: boolean;
