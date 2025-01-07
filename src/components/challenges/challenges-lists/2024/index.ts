@@ -6,5 +6,6 @@ import { day as day05 } from "./day05";
 import { day as day06 } from "./day06";
 import { day as day07 } from "./day07";
 import { day as day08 } from "./day08";
+import { day as day09 } from "./day09";
 
-export const challenges2024 = [day01, day02, day03, day04, day05, day06, day07, day08];
+export const challenges2024 = [day01, day02, day03, day04, day05, day06, day07, day08, day09];
