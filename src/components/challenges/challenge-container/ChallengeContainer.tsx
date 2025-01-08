@@ -11,8 +11,8 @@ interface ChallengeContainerProps {
   title: string;
   story?: string;
   stars: number;
-  firstStarFunction: (input: string) => unknown;
-  secondStarFunction: (input: string) => unknown;
+  firstStar: (input: string) => unknown;
+  secondStar: (input: string) => unknown;
 }
 
 export const ChallengeContainer = ({
@@ -21,8 +21,8 @@ export const ChallengeContainer = ({
   title,
   story,
   stars,
-  firstStarFunction,
-  secondStarFunction,
+  firstStar,
+  secondStar,
 }: ChallengeContainerProps) => {
   const [input, setInput] = useState("");
   const [responses, setResponses] = useState<{
@@ -75,8 +75,8 @@ export const ChallengeContainer = ({
           onChange={(e) => setInput(e.target.value)}
           onPaste={(e) => {
             const clipboardData = e.clipboardData.getData("text");
-            const first = firstStarFunction(clipboardData);
-            const second = secondStarFunction(clipboardData);
+            const first = firstStar(clipboardData);
+            const second = secondStar(clipboardData);
             setResponses({ first, second });
           }}
         />

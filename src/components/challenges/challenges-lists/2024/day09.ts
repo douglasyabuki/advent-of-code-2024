@@ -3,7 +3,7 @@ export const day = {
   title: "Day 9: Disk Fragmenter",
   stars: 2,
   story: ``,
-  firstStarFunction: (input: string | number): number => {
+  firstStar: (input: string | number): number => {
     const s = input.toString();
     const rawData = s.match(/(\d(\d|$))/g);
     const mappedDisk = rawData
@@ -29,7 +29,7 @@ export const day = {
       return checksum + mappedDisk[filledIndex] * position;
     }, 0);
   },
-  secondStarFunction: (input: string): number => {
+  secondStar: (input: string): number => {
     type File = {
       id: number | null;
       indexes: number[];

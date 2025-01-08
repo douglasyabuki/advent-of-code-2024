@@ -39,7 +39,7 @@ S.S.S.S.SS
 ..M.M.M.MM
 .X.X.XMASX
 Take a look at the little Elf's word search. How many times does XMAS appear?`,
-  firstStarFunction: (input: string): unknown => {
+  firstStar: (input: string): unknown => {
     const matrix = input.split("\n");
     const rows = matrix.length;
     const cols = matrix[0].length;
@@ -82,7 +82,7 @@ Take a look at the little Elf's word search. How many times does XMAS appear?`,
 
     return count;
   },
-  secondStarFunction: (input: string): unknown => {
+  secondStar: (input: string): unknown => {
     const matrix = input.split("\n");
     const rows = matrix.length;
     const cols = matrix[0].length;

@@ -75,7 +75,7 @@ The first example has antennas with two different frequencies, so the antinodes 
 Because the topmost A-frequency antenna overlaps with a 0-frequency antinode, there are 14 total unique locations that contain an antinode within the bounds of the map.
 
 Calculate the impact of the signal. How many unique locations within the bounds of the map contain an antinode?`,
-  firstStarFunction: (input: string): number => {
+  firstStar: (input: string): number => {
     type Location = {
       rowId: number;
       colId: number;
@@ -140,7 +140,7 @@ Calculate the impact of the signal. How many unique locations within the bounds 
     });
     return Array.from(antinodesLocations).length;
   },
-  secondStarFunction: (input: string): number => {
+  secondStar: (input: string): number => {
     type Location = {
       rowId: number;
       colId: number;

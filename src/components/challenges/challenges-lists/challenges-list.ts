@@ -5,8 +5,8 @@ export interface Challenge {
   title: string;
   stars: number;
   story: string;
-  firstStarFunction: (input: string) => unknown;
-  secondStarFunction: (input: string) => unknown;
+  firstStar: (input: string) => unknown;
+  secondStar: (input: string) => unknown;
 }
 
 export const challengesList: Record<string, Challenge[]> = {

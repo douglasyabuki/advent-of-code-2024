@@ -33,7 +33,7 @@ In the example above, the reports can be found safe or unsafe by checking those 
 So, in this example, 2 reports are safe.
 
 Analyze the unusual data from the engineers. How many reports are safe?`,
-  firstStarFunction: (input: string): number => {
+  firstStar: (input: string): number => {
     let count = 0;
     input.split("\n").forEach((line) => {
       const digits = line.split(" ").map(Number);
@@ -56,7 +56,7 @@ Analyze the unusual data from the engineers. How many reports are safe?`,
     });
     return count;
   },
-  secondStarFunction: (input: string): number => {
+  secondStar: (input: string): number => {
     let count = 0;
     input.split("\n").forEach((line) => {
       const digits = line.split(" ").map(Number);

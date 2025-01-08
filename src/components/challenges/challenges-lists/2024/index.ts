@@ -8,6 +8,7 @@ import { day as day07 } from "./day07";
 import { day as day08 } from "./day08";
 import { day as day09 } from "./day09";
 import { day as day10 } from "./day10";
+import { day as day11 } from "./day11";
 
 export const challenges2024 = [
   day01,
@@ -20,4 +21,5 @@ export const challenges2024 = [
   day08,
   day09,
   day10,
+  day11,
 ];

@@ -89,7 +89,7 @@ By predicting the guard's route, you can determine which specific positions in t
 In this example, the guard will visit 41 distinct positions on your map.
 
 Predict the path of the guard. How many distinct positions will the guard visit before leaving the mapped area?`,
-  firstStarFunction: (input: string): number => {
+  firstStar: (input: string): number => {
     type Directions = "^" | ">" | "v" | "<";
     const directions: Directions[] = ["^", ">", "v", "<"];
     let currentDirection: Directions = "^";
@@ -155,7 +155,7 @@ Predict the path of the guard. How many distinct positions will the guard visit 
     }
     return visited.size;
   },
-  secondStarFunction: (input: string): number => {
+  secondStar: (input: string): number => {
     type Directions = "^" | ">" | "v" | "<";
     type Cell = {
       isVisited: boolean;

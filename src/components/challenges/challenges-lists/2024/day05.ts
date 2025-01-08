@@ -75,7 +75,7 @@ These have middle page numbers of 61, 53, and 29 respectively. Adding these page
 Of course, you'll need to be careful: the actual list of page ordering rules is bigger and more complicated than the above example.
 
 Determine which updates are already in the correct order. What do you get if you add up the middle page number from those correctly-ordered updates?`,
-  firstStarFunction: (input: string): unknown => {
+  firstStar: (input: string): unknown => {
     const [rules, printSequences] = input
       .replace(/\r/g, "")
       .split("\n\n")
@@ -115,7 +115,7 @@ Determine which updates are already in the correct order. What do you get if you
     }
     return sumOfMiddles;
   },
-  secondStarFunction: (input: string): unknown => {
+  secondStar: (input: string): unknown => {
     const [rules, printSequences] = input
       .replace(/\r/g, "")
       .split("\n\n")
